@@ -10,7 +10,7 @@ const HeroSection = () => {
 
   const downloadCV = () => {
     // Replace with actual CV download link
-    window.open("#", "_blank");
+    window.open("https://github.com/Vohoangtuanhdhtdm", "_blank");
   };
 
   return (
@@ -50,7 +50,7 @@ const HeroSection = () => {
               className="px-8 py-3 text-lg"
               onClick={downloadCV}
             >
-              Download CV
+              View My Github
             </Button>
           </div>
         </div>
