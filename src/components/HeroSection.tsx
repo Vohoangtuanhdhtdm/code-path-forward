@@ -1,4 +1,7 @@
+
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -9,50 +12,104 @@ const HeroSection = () => {
   };
 
   const downloadCV = () => {
-    // Replace with actual CV download link
     window.open("https://github.com/Vohoangtuanhdhtdm", "_blank");
   };
 
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center section-padding pt-20"
+      className="min-h-screen flex items-center justify-center section-padding pt-20 relative overflow-hidden"
     >
-      <div className="container-width">
-        <div className="text-center space-y-8 animate-fade-in">
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground">
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 gradient-bg opacity-50" />
+      
+      <div className="container-width relative z-10">
+        <div className="text-center space-y-8">
+          <motion.div 
+            className="space-y-4"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.h1 
+              className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            >
               Võ Hoàng Tuấn
-            </h1>
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-primary font-medium">
+            </motion.h1>
+            <motion.h2 
+              className="text-xl md:text-2xl lg:text-3xl text-primary font-medium"
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               Software Developer
-            </h2>
-          </div>
+            </motion.h2>
+          </motion.div>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <motion.p 
+            className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             A passionate and detail-oriented developer with deep experience in
             building robust, maintainable, and scalable backend systems using
             .NET and Clean Architecture. Eager to contribute to building
             high-quality "Make in Vietnam" technology products.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="px-8 py-3 text-lg"
-              onClick={() => scrollToSection("projects")}
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              View My Projects
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="px-8 py-3 text-lg"
-              onClick={downloadCV}
+              <Button
+                size="lg"
+                className="px-8 py-3 text-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg glow-effect"
+                onClick={() => scrollToSection("projects")}
+              >
+                View My Projects
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              View My Github
-            </Button>
-          </div>
+              <Button
+                variant="outline"
+                size="lg"
+                className="px-8 py-3 text-lg border-2 border-primary hover:bg-primary/10"
+                onClick={downloadCV}
+              >
+                View My Github
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Animated scroll indicator */}
+          <motion.div
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+          >
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="cursor-pointer"
+              onClick={() => scrollToSection("about")}
+            >
+              <ChevronDown className="w-8 h-8 text-primary" />
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
