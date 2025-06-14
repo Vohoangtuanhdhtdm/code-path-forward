@@ -7,93 +7,93 @@
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 15 23 42;
+    --background: 255 255 255;
+    --foreground: 30 41 59;
 
-    --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card: 248 250 252;
+    --card-foreground: 30 41 59;
 
     --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover-foreground: 30 41 59;
 
-    --primary: 99 102 241;
-    --primary-foreground: 248 250 252;
+    --primary: 59 130 246;
+    --primary-foreground: 255 255 255;
 
     --secondary: 241 245 249;
-    --secondary-foreground: 15 23 42;
+    --secondary-foreground: 51 65 85;
 
-    --muted: 241 245 249;
+    --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
-    --accent: 34 211 238;
-    --accent-foreground: 15 23 42;
+    --accent: 16 185 129;
+    --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
+    --destructive-foreground: 255 255 255;
 
     --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 99 102 241;
+    --input: 241 245 249;
+    --ring: 59 130 246;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 248 250 252;
-    --sidebar-foreground: 15 23 42;
-    --sidebar-primary: 99 102 241;
-    --sidebar-primary-foreground: 248 250 252;
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 30 41 59;
+    --sidebar-primary: 59 130 246;
+    --sidebar-primary-foreground: 255 255 255;
     --sidebar-accent: 241 245 249;
-    --sidebar-accent-foreground: 15 23 42;
+    --sidebar-accent-foreground: 30 41 59;
     --sidebar-border: 226 232 240;
-    --sidebar-ring: 99 102 241;
+    --sidebar-ring: 59 130 246;
 
-    /* Modern gradient colors - Teal to Violet */
-    --gradient-from: 99 102 241;
-    --gradient-via: 34 211 238;
-    --gradient-to: 168 85 247;
+    /* Modern gradient colors - Blue to Emerald to Purple */
+    --gradient-from: 59 130 246;
+    --gradient-via: 16 185 129;
+    --gradient-to: 147 51 234;
   }
 
   .dark {
-    --background: 3 7 18;
-    --foreground: 248 250 252;
+    --background: 255 255 255;
+    --foreground: 30 41 59;
 
-    --card: 15 23 42;
-    --card-foreground: 248 250 252;
+    --card: 248 250 252;
+    --card-foreground: 30 41 59;
 
-    --popover: 15 23 42;
-    --popover-foreground: 248 250 252;
+    --popover: 255 255 255;
+    --popover-foreground: 30 41 59;
 
-    --primary: 129 140 248;
-    --primary-foreground: 15 23 42;
+    --primary: 59 130 246;
+    --primary-foreground: 255 255 255;
 
-    --secondary: 30 41 59;
-    --secondary-foreground: 248 250 252;
+    --secondary: 241 245 249;
+    --secondary-foreground: 51 65 85;
 
-    --muted: 30 41 59;
-    --muted-foreground: 148 163 184;
+    --muted: 248 250 252;
+    --muted-foreground: 100 116 139;
 
-    --accent: 56 189 248;
-    --accent-foreground: 15 23 42;
+    --accent: 16 185 129;
+    --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
+    --destructive-foreground: 255 255 255;
 
-    --border: 30 41 59;
-    --input: 30 41 59;
-    --ring: 129 140 248;
+    --border: 226 232 240;
+    --input: 241 245 249;
+    --ring: 59 130 246;
 
-    --sidebar-background: 3 7 18;
-    --sidebar-foreground: 248 250 252;
-    --sidebar-primary: 129 140 248;
-    --sidebar-primary-foreground: 15 23 42;
-    --sidebar-accent: 30 41 59;
-    --sidebar-accent-foreground: 248 250 252;
-    --sidebar-border: 30 41 59;
-    --sidebar-ring: 129 140 248;
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 30 41 59;
+    --sidebar-primary: 59 130 246;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 241 245 249;
+    --sidebar-accent-foreground: 30 41 59;
+    --sidebar-border: 226 232 240;
+    --sidebar-ring: 59 130 246;
 
-    /* Modern gradient colors for dark mode - Teal to Violet */
-    --gradient-from: 129 140 248;
-    --gradient-via: 56 189 248;
-    --gradient-to: 196 181 253;
+    /* Modern gradient colors for light theme */
+    --gradient-from: 59 130 246;
+    --gradient-via: 16 185 129;
+    --gradient-to: 147 51 234;
   }
 }
 
@@ -121,19 +121,19 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-500 via-cyan-400 to-purple-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-500 via-emerald-500 to-purple-600 bg-clip-text text-transparent;
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, rgb(99 102 241 / 0.08) 0%, rgb(34 211 238 / 0.08) 50%, rgb(168 85 247 / 0.08) 100%);
+    background: linear-gradient(135deg, rgb(59 130 246 / 0.05) 0%, rgb(16 185 129 / 0.05) 50%, rgb(147 51 234 / 0.05) 100%);
   }
 
   .glass-effect {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+    @apply bg-white/60 backdrop-blur-lg border border-slate-200/50 shadow-lg;
   }
 
   .glow-effect {
-    box-shadow: 0 0 20px rgb(99 102 241 / 0.3), 0 0 40px rgb(34 211 238 / 0.2), 0 0 60px rgb(168 85 247 / 0.1);
+    box-shadow: 0 0 20px rgb(59 130 246 / 0.15), 0 0 40px rgb(16 185 129 / 0.1), 0 0 60px rgb(147 51 234 / 0.05);
   }
 }
 
@@ -153,13 +153,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-background;
+  @apply bg-slate-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-indigo-500 to-cyan-400 rounded-full;
+  @apply bg-gradient-to-b from-blue-500 to-emerald-500 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply from-indigo-600 to-cyan-500;
+  @apply from-blue-600 to-emerald-600;
 }

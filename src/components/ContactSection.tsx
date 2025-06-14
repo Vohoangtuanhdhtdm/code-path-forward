@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -72,13 +73,13 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 section-padding bg-muted/30">
+    <section id="contact" className="py-20 section-padding bg-slate-50">
       <div className="container-width">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             I'm currently looking for new opportunities. My inbox is always
             open. Whether you have a question or just want to say hi, I'll try
             my best to get back to you!
@@ -87,15 +88,15 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-card border border-border rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
+          <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6">
               Send a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-foreground mb-2"
+                  className="block text-sm font-medium text-slate-700 mb-2"
                 >
                   Name
                 </label>
@@ -106,7 +107,7 @@ const ContactSection = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full"
+                  className="w-full border-slate-300 focus:border-blue-500 focus:ring-blue-500"
                   placeholder="Your Name"
                 />
               </div>
@@ -114,7 +115,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-foreground mb-2"
+                  className="block text-sm font-medium text-slate-700 mb-2"
                 >
                   Email
                 </label>
@@ -125,7 +126,7 @@ const ContactSection = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full"
+                  className="w-full border-slate-300 focus:border-blue-500 focus:ring-blue-500"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -133,7 +134,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-foreground mb-2"
+                  className="block text-sm font-medium text-slate-700 mb-2"
                 >
                   Message
                 </label>
@@ -143,12 +144,12 @@ const ContactSection = () => {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full h-32"
+                  className="w-full h-32 border-slate-300 focus:border-blue-500 focus:ring-blue-500"
                   placeholder="Your message..."
                 />
               </div>
 
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700">
                 Send Message
               </Button>
             </form>
@@ -157,7 +158,7 @@ const ContactSection = () => {
           {/* Social Links */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">
                 Connect With Me
               </h3>
               <div className="space-y-4">
@@ -169,10 +170,10 @@ const ContactSection = () => {
                     rel={
                       link.name !== "Email" ? "noopener noreferrer" : undefined
                     }
-                    className="flex items-center space-x-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+                    className="flex items-center space-x-4 p-4 bg-white border border-slate-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-300"
                   >
-                    <div className="text-primary">{link.icon}</div>
-                    <span className="text-foreground font-medium">
+                    <div className="text-blue-600">{link.icon}</div>
+                    <span className="text-slate-700 font-medium">
                       {link.name}
                     </span>
                   </a>
@@ -180,11 +181,11 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="bg-primary/10 border border-primary/20 rounded-lg p-6">
-              <h4 className="font-semibold text-foreground mb-2">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h4 className="font-semibold text-slate-800 mb-2">
                 Quick Response
               </h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-slate-600">
                 I typically respond to messages within 24 hours. For urgent
                 inquiries, feel free to reach out via LinkedIn or email
                 directly.

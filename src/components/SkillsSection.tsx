@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -66,7 +67,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section className="py-20 section-padding gradient-bg" ref={ref}>
+    <section className="py-20 section-padding bg-gradient-to-br from-blue-50 via-white to-purple-50" ref={ref}>
       <div className="container-width">
         <motion.div 
           className="text-center mb-16"
@@ -77,7 +78,7 @@ const SkillsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
             My Technical Skills
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             A comprehensive toolkit for building robust and scalable applications
           </p>
         </motion.div>
@@ -101,7 +102,7 @@ const SkillsSection = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div 
                     key={skillIndex} 
-                    className="glass-effect rounded-lg p-4 hover:glow-effect transition-all duration-300 group cursor-pointer"
+                    className="glass-effect rounded-lg p-4 hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 group cursor-pointer border border-slate-200"
                     whileHover={{ 
                       scale: 1.05,
                       transition: { duration: 0.2 }
@@ -122,7 +123,7 @@ const SkillsSection = () => {
                       >
                         {skill.icon}
                       </motion.span>
-                      <span className="text-foreground font-medium group-hover:gradient-text transition-all duration-300">
+                      <span className="text-slate-700 font-medium group-hover:gradient-text transition-all duration-300">
                         {skill.name}
                       </span>
                     </div>

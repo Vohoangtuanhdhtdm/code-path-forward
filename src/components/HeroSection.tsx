@@ -18,10 +18,10 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center section-padding pt-20 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center section-padding pt-20 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-emerald-50"
     >
       {/* Animated background gradient */}
-      <div className="absolute inset-0 gradient-bg opacity-50" />
+      <div className="absolute inset-0 gradient-bg opacity-80" />
       
       <div className="container-width relative z-10">
         <div className="text-center space-y-8">
@@ -40,7 +40,7 @@ const HeroSection = () => {
               Võ Hoàng Tuấn
             </motion.h1>
             <motion.h2 
-              className="text-xl md:text-2xl lg:text-3xl text-primary font-medium"
+              className="text-xl md:text-2xl lg:text-3xl text-blue-600 font-semibold"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -50,7 +50,7 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.p 
-            className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -73,7 +73,7 @@ const HeroSection = () => {
             >
               <Button
                 size="lg"
-                className="px-8 py-3 text-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg glow-effect"
+                className="px-8 py-3 text-lg bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 shadow-lg text-white font-semibold"
                 onClick={() => scrollToSection("projects")}
               >
                 View My Projects
@@ -86,7 +86,7 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-8 py-3 text-lg border-2 border-primary hover:bg-primary/10"
+                className="px-8 py-3 text-lg border-2 border-blue-500 text-blue-600 hover:bg-blue-50 font-semibold"
                 onClick={downloadCV}
               >
                 View My Github
@@ -107,7 +107,7 @@ const HeroSection = () => {
               className="cursor-pointer"
               onClick={() => scrollToSection("about")}
             >
-              <ChevronDown className="w-8 h-8 text-primary" />
+              <ChevronDown className="w-8 h-8 text-blue-500" />
             </motion.div>
           </motion.div>
         </div>
