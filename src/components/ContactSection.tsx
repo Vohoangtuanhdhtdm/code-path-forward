@@ -73,13 +73,13 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 section-padding bg-gradient-to-br from-pink-50/30 via-white to-indigo-50/40">
+    <section id="contact" className="py-20 section-padding bg-gradient-to-br from-indigo-50/40 via-white to-sky-50/30">
       <div className="container-width">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             I'm currently looking for new opportunities. My inbox is always
             open. Whether you have a question or just want to say hi, I'll try
             my best to get back to you!
@@ -88,15 +88,15 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="glass-effect rounded-xl p-8 border border-indigo-100/60">
-            <h3 className="text-2xl font-bold text-slate-700 mb-6">
+          <div className="glass-effect rounded-xl p-8 border border-gray-200/70">
+            <h3 className="text-2xl font-bold text-gray-700 mb-6">
               Send a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-slate-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-2"
                 >
                   Name
                 </label>
@@ -107,7 +107,7 @@ const ContactSection = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full border-indigo-200 focus:border-indigo-400 focus:ring-indigo-400"
+                  className="w-full border-gray-200 focus:border-indigo-400 focus:ring-indigo-400"
                   placeholder="Your Name"
                 />
               </div>
@@ -115,7 +115,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-slate-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-2"
                 >
                   Email
                 </label>
@@ -126,7 +126,7 @@ const ContactSection = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full border-indigo-200 focus:border-indigo-400 focus:ring-indigo-400"
+                  className="w-full border-gray-200 focus:border-indigo-400 focus:ring-indigo-400"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -134,7 +134,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-slate-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 mb-2"
                 >
                   Message
                 </label>
@@ -144,12 +144,12 @@ const ContactSection = () => {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full h-32 border-indigo-200 focus:border-indigo-400 focus:ring-indigo-400"
+                  className="w-full h-32 border-gray-200 focus:border-indigo-400 focus:ring-indigo-400"
                   placeholder="Your message..."
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-gradient-to-r from-indigo-600 via-pink-500 to-violet-600 hover:from-indigo-700 hover:via-pink-600 hover:to-violet-700">
+              <Button type="submit" className="w-full bg-gradient-to-r from-indigo-500 via-sky-400 to-amber-400 hover:from-indigo-600 hover:via-sky-500 hover:to-amber-500">
                 Send Message
               </Button>
             </form>
@@ -158,7 +158,7 @@ const ContactSection = () => {
           {/* Social Links */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-slate-700 mb-6">
+              <h3 className="text-2xl font-bold text-gray-700 mb-6">
                 Connect With Me
               </h3>
               <div className="space-y-4">
@@ -170,10 +170,10 @@ const ContactSection = () => {
                     rel={
                       link.name !== "Email" ? "noopener noreferrer" : undefined
                     }
-                    className="flex items-center space-x-4 p-4 glass-effect rounded-lg hover:border-indigo-300 card-hover border border-indigo-100/60"
+                    className="flex items-center space-x-4 p-4 glass-effect rounded-lg hover:border-indigo-300 card-hover border border-gray-200/70"
                   >
                     <div className="text-indigo-600">{link.icon}</div>
-                    <span className="text-slate-700 font-medium">
+                    <span className="text-gray-700 font-medium">
                       {link.name}
                     </span>
                   </a>
@@ -181,11 +181,11 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-indigo-50/80 to-violet-50/60 border border-indigo-200/60 rounded-lg p-6">
-              <h4 className="font-semibold text-slate-700 mb-2">
+            <div className="bg-gradient-to-br from-indigo-50/80 to-sky-50/60 border border-gray-200/60 rounded-lg p-6">
+              <h4 className="font-semibold text-gray-700 mb-2">
                 Quick Response
               </h4>
-              <p className="text-sm text-slate-600">
+              <p className="text-sm text-gray-600">
                 I typically respond to messages within 24 hours. For urgent
                 inquiries, feel free to reach out via LinkedIn or email
                 directly.

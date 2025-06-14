@@ -7,93 +7,93 @@
 
 @layer base {
   :root {
-    --background: 251 251 251;
-    --foreground: 51 65 85;
+    --background: 249 250 251;
+    --foreground: 55 65 81;
 
     --card: 255 255 255;
-    --card-foreground: 51 65 85;
+    --card-foreground: 55 65 81;
 
     --popover: 255 255 255;
-    --popover-foreground: 51 65 85;
+    --popover-foreground: 55 65 81;
 
     --primary: 79 70 229;
     --primary-foreground: 255 255 255;
 
-    --secondary: 248 250 252;
-    --secondary-foreground: 71 85 105;
+    --secondary: 243 244 246;
+    --secondary-foreground: 75 85 99;
 
-    --muted: 248 250 252;
-    --muted-foreground: 100 116 139;
+    --muted: 243 244 246;
+    --muted-foreground: 107 114 128;
 
-    --accent: 236 72 153;
+    --accent: 56 189 248;
     --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
 
-    --border: 226 232 240;
-    --input: 248 250 252;
+    --border: 229 231 235;
+    --input: 243 244 246;
     --ring: 79 70 229;
 
     --radius: 0.75rem;
 
     --sidebar-background: 255 255 255;
-    --sidebar-foreground: 51 65 85;
+    --sidebar-foreground: 55 65 81;
     --sidebar-primary: 79 70 229;
     --sidebar-primary-foreground: 255 255 255;
-    --sidebar-accent: 248 250 252;
-    --sidebar-accent-foreground: 51 65 85;
-    --sidebar-border: 226 232 240;
+    --sidebar-accent: 243 244 246;
+    --sidebar-accent-foreground: 55 65 81;
+    --sidebar-border: 229 231 235;
     --sidebar-ring: 79 70 229;
 
-    /* Harmonious gradient colors - Indigo to Pink to Violet */
+    /* Harmonious color palette - Soft Indigo, Calm Blue, Warm Beige */
     --gradient-from: 79 70 229;
-    --gradient-via: 236 72 153;
-    --gradient-to: 124 58 237;
+    --gradient-via: 56 189 248;
+    --gradient-to: 169 132 103;
   }
 
   .dark {
-    --background: 251 251 251;
-    --foreground: 51 65 85;
+    --background: 249 250 251;
+    --foreground: 55 65 81;
 
     --card: 255 255 255;
-    --card-foreground: 51 65 85;
+    --card-foreground: 55 65 81;
 
     --popover: 255 255 255;
-    --popover-foreground: 51 65 85;
+    --popover-foreground: 55 65 81;
 
     --primary: 79 70 229;
     --primary-foreground: 255 255 255;
 
-    --secondary: 248 250 252;
-    --secondary-foreground: 71 85 105;
+    --secondary: 243 244 246;
+    --secondary-foreground: 75 85 99;
 
-    --muted: 248 250 252;
-    --muted-foreground: 100 116 139;
+    --muted: 243 244 246;
+    --muted-foreground: 107 114 128;
 
-    --accent: 236 72 153;
+    --accent: 56 189 248;
     --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
 
-    --border: 226 232 240;
-    --input: 248 250 252;
+    --border: 229 231 235;
+    --input: 243 244 246;
     --ring: 79 70 229;
 
     --sidebar-background: 255 255 255;
-    --sidebar-foreground: 51 65 85;
+    --sidebar-foreground: 55 65 81;
     --sidebar-primary: 79 70 229;
     --sidebar-primary-foreground: 255 255 255;
-    --sidebar-accent: 248 250 252;
-    --sidebar-accent-foreground: 51 65 85;
-    --sidebar-border: 226 232 240;
+    --sidebar-accent: 243 244 246;
+    --sidebar-accent-foreground: 55 65 81;
+    --sidebar-border: 229 231 235;
     --sidebar-ring: 79 70 229;
 
-    /* Harmonious gradient colors */
+    /* Harmonious color palette */
     --gradient-from: 79 70 229;
-    --gradient-via: 236 72 153;
-    --gradient-to: 124 58 237;
+    --gradient-via: 56 189 248;
+    --gradient-to: 169 132 103;
   }
 }
 
@@ -121,23 +121,23 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-600 via-pink-500 to-violet-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-600 via-sky-400 to-amber-600 bg-clip-text text-transparent;
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, rgb(79 70 229 / 0.04) 0%, rgb(236 72 153 / 0.06) 50%, rgb(124 58 237 / 0.04) 100%);
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.03) 0%, rgba(56, 189, 248, 0.05) 50%, rgba(169, 132, 103, 0.03) 100%);
   }
 
   .glass-effect {
-    @apply bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-xl;
+    @apply bg-white/80 backdrop-blur-xl border border-gray-200/70 shadow-lg;
   }
 
   .glow-effect {
-    box-shadow: 0 4px 20px rgb(79 70 229 / 0.12), 0 8px 40px rgb(236 72 153 / 0.08), 0 16px 80px rgb(124 58 237 / 0.04);
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.08), 0 8px 40px rgba(56, 189, 248, 0.06), 0 16px 80px rgba(169, 132, 103, 0.04);
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1;
   }
 }
 
@@ -157,13 +157,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-100;
+  @apply bg-gray-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-indigo-500 via-pink-500 to-violet-500 rounded-full;
+  @apply bg-gradient-to-b from-indigo-400 via-sky-400 to-amber-400 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply from-indigo-600 via-pink-600 to-violet-600;
+  @apply from-indigo-500 via-sky-500 to-amber-500;
 }

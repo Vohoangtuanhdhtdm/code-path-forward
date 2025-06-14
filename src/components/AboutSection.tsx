@@ -8,7 +8,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="about" className="py-20 section-padding bg-gradient-to-br from-slate-50/80 via-white to-indigo-50/40" ref={ref}>
+    <section id="about" className="py-20 section-padding bg-gradient-to-br from-blue-50/50 via-white to-amber-50/30" ref={ref}>
       <div className="container-width">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
@@ -26,7 +26,7 @@ const AboutSection = () => {
               <div className="w-80 h-80 glass-effect rounded-2xl flex items-center justify-center relative overflow-hidden">
                 {/* Animated border */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-pink-500 to-violet-500 rounded-2xl"
+                  className="absolute inset-0 bg-gradient-to-r from-indigo-400 via-sky-400 to-amber-400 rounded-2xl"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                   style={{ padding: "2px" }}
@@ -34,9 +34,9 @@ const AboutSection = () => {
                   <div className="w-full h-full bg-white rounded-2xl" />
                 </motion.div>
                 
-                <div className="relative z-10 text-center text-slate-600 p-6">
+                <div className="relative z-10 text-center text-gray-600 p-6">
                   <motion.div 
-                    className="w-28 h-28 bg-gradient-to-br from-indigo-500 via-pink-500 to-violet-500 rounded-full mx-auto mb-7 flex items-center justify-center overflow-hidden"
+                    className="w-28 h-28 bg-gradient-to-br from-indigo-400 via-sky-400 to-amber-400 rounded-full mx-auto mb-7 flex items-center justify-center overflow-hidden"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.8 }}
                   >
@@ -47,7 +47,7 @@ const AboutSection = () => {
                     />
                   </motion.div>
                   <p className="text-sm font-semibold gradient-text">Võ Hoàng Tuấn</p>
-                  <p className="text-xs text-slate-500">(Software Developer)</p>
+                  <p className="text-xs text-gray-500">(Software Developer)</p>
                 </div>
               </div>
             </motion.div>
@@ -69,7 +69,7 @@ const AboutSection = () => {
               About Me
             </motion.h2>
 
-            <div className="space-y-4 text-slate-600 leading-relaxed">
+            <div className="space-y-4 text-gray-600 leading-relaxed">
               <motion.p 
                 className="text-lg"
                 initial={{ opacity: 0, y: 20 }}
