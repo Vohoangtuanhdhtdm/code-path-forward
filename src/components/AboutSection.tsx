@@ -8,7 +8,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="about" className="py-20 section-padding bg-slate-50" ref={ref}>
+    <section id="about" className="py-20 section-padding bg-gradient-to-br from-slate-50/80 via-white to-indigo-50/40" ref={ref}>
       <div className="container-width">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
@@ -26,7 +26,7 @@ const AboutSection = () => {
               <div className="w-80 h-80 glass-effect rounded-2xl flex items-center justify-center relative overflow-hidden">
                 {/* Animated border */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-500 via-emerald-500 to-purple-600 rounded-2xl"
+                  className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-pink-500 to-violet-500 rounded-2xl"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                   style={{ padding: "2px" }}
@@ -36,7 +36,7 @@ const AboutSection = () => {
                 
                 <div className="relative z-10 text-center text-slate-600 p-6">
                   <motion.div 
-                    className="w-28 h-28 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full mx-auto mb-7 flex items-center justify-center overflow-hidden"
+                    className="w-28 h-28 bg-gradient-to-br from-indigo-500 via-pink-500 to-violet-500 rounded-full mx-auto mb-7 flex items-center justify-center overflow-hidden"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.8 }}
                   >

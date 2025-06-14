@@ -73,7 +73,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 section-padding bg-slate-50">
+    <section id="contact" className="py-20 section-padding bg-gradient-to-br from-pink-50/30 via-white to-indigo-50/40">
       <div className="container-width">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
@@ -88,8 +88,8 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
-            <h3 className="text-2xl font-bold text-slate-800 mb-6">
+          <div className="glass-effect rounded-xl p-8 border border-indigo-100/60">
+            <h3 className="text-2xl font-bold text-slate-700 mb-6">
               Send a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -107,7 +107,7 @@ const ContactSection = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full border-slate-300 focus:border-blue-500 focus:ring-blue-500"
+                  className="w-full border-indigo-200 focus:border-indigo-400 focus:ring-indigo-400"
                   placeholder="Your Name"
                 />
               </div>
@@ -126,7 +126,7 @@ const ContactSection = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full border-slate-300 focus:border-blue-500 focus:ring-blue-500"
+                  className="w-full border-indigo-200 focus:border-indigo-400 focus:ring-indigo-400"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -144,12 +144,12 @@ const ContactSection = () => {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full h-32 border-slate-300 focus:border-blue-500 focus:ring-blue-500"
+                  className="w-full h-32 border-indigo-200 focus:border-indigo-400 focus:ring-indigo-400"
                   placeholder="Your message..."
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700">
+              <Button type="submit" className="w-full bg-gradient-to-r from-indigo-600 via-pink-500 to-violet-600 hover:from-indigo-700 hover:via-pink-600 hover:to-violet-700">
                 Send Message
               </Button>
             </form>
@@ -158,7 +158,7 @@ const ContactSection = () => {
           {/* Social Links */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-6">
+              <h3 className="text-2xl font-bold text-slate-700 mb-6">
                 Connect With Me
               </h3>
               <div className="space-y-4">
@@ -170,9 +170,9 @@ const ContactSection = () => {
                     rel={
                       link.name !== "Email" ? "noopener noreferrer" : undefined
                     }
-                    className="flex items-center space-x-4 p-4 bg-white border border-slate-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-300"
+                    className="flex items-center space-x-4 p-4 glass-effect rounded-lg hover:border-indigo-300 card-hover border border-indigo-100/60"
                   >
-                    <div className="text-blue-600">{link.icon}</div>
+                    <div className="text-indigo-600">{link.icon}</div>
                     <span className="text-slate-700 font-medium">
                       {link.name}
                     </span>
@@ -181,8 +181,8 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h4 className="font-semibold text-slate-800 mb-2">
+            <div className="bg-gradient-to-br from-indigo-50/80 to-violet-50/60 border border-indigo-200/60 rounded-lg p-6">
+              <h4 className="font-semibold text-slate-700 mb-2">
                 Quick Response
               </h4>
               <p className="text-sm text-slate-600">
