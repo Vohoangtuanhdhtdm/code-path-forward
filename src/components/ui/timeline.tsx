@@ -1,6 +1,11 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { 
+  CodeBracketIcon,
+  CloudIcon,
+  AcademicCapIcon
+} from "@heroicons/react/24/outline";
 
 export interface TimelineEntry {
   title: string;
@@ -86,6 +91,10 @@ export const TimelineDemo = () => {
       title: "2024",
       content: (
         <div>
+          <div className="flex items-center mb-4">
+            <CodeBracketIcon className="w-6 h-6 text-gray-600 mr-2" />
+            <span className="text-sm font-medium text-gray-700">Software Development</span>
+          </div>
           <p className="text-gray-800 dark:text-gray-200 text-xs md:text-sm font-normal mb-8">
             Currently working as a Software Developer, focusing on .NET backend development
             and Clean Architecture principles. Building scalable and maintainable systems.
@@ -109,6 +118,10 @@ export const TimelineDemo = () => {
       title: "2023",
       content: (
         <div>
+          <div className="flex items-center mb-4">
+            <CloudIcon className="w-6 h-6 text-gray-600 mr-2" />
+            <span className="text-sm font-medium text-gray-700">Technology Expansion</span>
+          </div>
           <p className="text-gray-800 dark:text-gray-200 text-xs md:text-sm font-normal mb-8">
             Expanded expertise in modern web technologies and cloud computing.
             Focused on building responsive applications with React and TypeScript.
@@ -132,6 +145,10 @@ export const TimelineDemo = () => {
       title: "2022",
       content: (
         <div>
+          <div className="flex items-center mb-4">
+            <AcademicCapIcon className="w-6 h-6 text-gray-600 mr-2" />
+            <span className="text-sm font-medium text-gray-700">Learning Journey</span>
+          </div>
           <p className="text-gray-800 dark:text-gray-200 text-xs md:text-sm font-normal mb-8">
             Started my journey in software development, learning programming fundamentals
             and exploring various technologies. Built my first web applications.

@@ -2,6 +2,16 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { 
+  CodeBracketIcon, 
+  CubeIcon, 
+  ServerIcon, 
+  CommandLineIcon,
+  CircleStackIcon,
+  WrenchScrewdriverIcon,
+  BoltIcon,
+  ArrowPathIcon 
+} from "@heroicons/react/24/outline";
 
 const SkillsSection = () => {
   const ref = useRef(null);
@@ -11,35 +21,35 @@ const SkillsSection = () => {
     {
       title: "Languages & Platforms",
       skills: [
-        { name: "C#", icon: "🔷" },
-        { name: ".NET API", icon: "🚀" },
-        { name: ".NET MVC", icon: "🌐" },
-        { name: "ReactJS", icon: "⚛️" }
+        { name: "C#", icon: <CodeBracketIcon className="w-6 h-6" /> },
+        { name: ".NET API", icon: <BoltIcon className="w-6 h-6" /> },
+        { name: ".NET MVC", icon: <CubeIcon className="w-6 h-6" /> },
+        { name: "ReactJS", icon: <CommandLineIcon className="w-6 h-6" /> }
       ]
     },
     {
       title: "Architectures & Paradigms",
       skills: [
-        { name: "Clean Architecture (Expert)", icon: "🏗️" },
-        { name: "SOLID Principles", icon: "📐" },
-        { name: "RESTful API Design", icon: "🔗" },
-        { name: "Microservices Environment", icon: "🔧" }
+        { name: "Clean Architecture (Expert)", icon: <CubeIcon className="w-6 h-6" /> },
+        { name: "SOLID Principles", icon: <CodeBracketIcon className="w-6 h-6" /> },
+        { name: "RESTful API Design", icon: <ServerIcon className="w-6 h-6" /> },
+        { name: "Microservices Environment", icon: <WrenchScrewdriverIcon className="w-6 h-6" /> }
       ]
     },
     {
       title: "Databases",
       skills: [
-        { name: "Microsoft SQL Server", icon: "🗄️" }
+        { name: "Microsoft SQL Server", icon: <CircleStackIcon className="w-6 h-6" /> }
       ]
     },
     {
       title: "Tools & Workflows",
       skills: [
-        { name: "Git", icon: "📝" },
-        { name: "GitHub", icon: "🐙" },
-        { name: "Visual Studio", icon: "💻" },
-        { name: "Docker", icon: "🐳" },
-        { name: "Agile/Scrum", icon: "🔄" }
+        { name: "Git", icon: <CodeBracketIcon className="w-6 h-6" /> },
+        { name: "GitHub", icon: <CodeBracketIcon className="w-6 h-6" /> },
+        { name: "Visual Studio", icon: <CommandLineIcon className="w-6 h-6" /> },
+        { name: "Docker", icon: <CubeIcon className="w-6 h-6" /> },
+        { name: "Agile/Scrum", icon: <ArrowPathIcon className="w-6 h-6" /> }
       ]
     }
   ];
@@ -116,13 +126,13 @@ const SkillsSection = () => {
                     }}
                   >
                     <div className="flex items-center space-x-3">
-                      <motion.span 
-                        className="text-2xl"
+                      <motion.div 
+                        className="text-gray-600 group-hover:text-black transition-colors duration-300"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.5 }}
                       >
                         {skill.icon}
-                      </motion.span>
+                      </motion.div>
                       <span className="text-gray-700 font-medium group-hover:gradient-text transition-all duration-300">
                         {skill.name}
                       </span>

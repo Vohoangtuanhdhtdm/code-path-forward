@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -107,7 +107,7 @@ const HeroSection = () => {
               className="cursor-pointer"
               onClick={() => scrollToSection("about")}
             >
-              <ChevronDown className="w-8 h-8 text-gray-500" />
+              <ChevronDownIcon className="w-8 h-8 text-gray-500" />
             </motion.div>
           </motion.div>
         </div>

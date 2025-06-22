@@ -3,7 +3,12 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { 
+  CodeBracketIcon,
+  ShoppingCartIcon,
+  SparklesIcon
+} from "@heroicons/react/24/solid";
 
 const ProjectsSection = () => {
   const ref = useRef(null);
@@ -26,7 +31,7 @@ const ProjectsSection = () => {
         "Docker",
       ],
       githubLink: "https://github.com/Vohoangtuanhdhtdm/Meditation.API2.git",
-      icon: "🧘",
+      icon: <SparklesIcon className="w-12 h-12" />,
       gradient: "from-gray-400 to-gray-600",
     },
     {
@@ -37,7 +42,7 @@ const ProjectsSection = () => {
         "As a Frontend Developer, I was responsible for building responsive UI components in ReactJS and integrating data from multiple independent backend services (Product, Order, Identity) into a seamless user experience.",
       technologies: ["ReactJS", "REST API", "Microservices environment", "Git"],
       githubLink: "https://github.com/Zeustakeshi/Lemoo.git",
-      icon: "🛒",
+      icon: <ShoppingCartIcon className="w-12 h-12" />,
       gradient: "from-gray-600 to-gray-800",
     },
     {
@@ -48,7 +53,7 @@ const ProjectsSection = () => {
         "Built both the .NET MVC backend for server-side logic and the interactive ReactJS frontend, providing an end-to-end development experience.",
       technologies: [".NET MVC", "ReactJS", "SQL Server", "HTML/CSS"],
       githubLink: "https://github.com/Vohoangtuanhdhtdm/CuaHangVHT.git",
-      icon: "👔",
+      icon: <CodeBracketIcon className="w-12 h-12" />,
       gradient: "from-gray-800 to-gray-400",
     },
   ];
@@ -117,7 +122,7 @@ const ProjectsSection = () => {
                 
                 <div className="relative z-10 space-y-4 h-full flex flex-col">
                   <motion.div 
-                    className="text-6xl text-center mb-4"
+                    className="text-gray-600 group-hover:text-black transition-colors duration-300 flex justify-center mb-4"
                     whileHover={{ 
                       scale: 1.2,
                       rotate: 360,
@@ -179,9 +184,9 @@ const ProjectsSection = () => {
                       className="w-full border-gray-300 text-gray-700 group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-300"
                       onClick={() => window.open(project.githubLink, "_blank")}
                     >
-                      <Github className="w-4 h-4 mr-2" />
+                      <CodeBracketIcon className="w-4 h-4 mr-2" />
                       View on GitHub
-                      <ExternalLink className="w-4 h-4 ml-2" />
+                      <ArrowTopRightOnSquareIcon className="w-4 h-4 ml-2" />
                     </Button>
                   </motion.div>
                 </div>
