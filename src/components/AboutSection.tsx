@@ -1,105 +1,74 @@
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import BlurFade from "@/components/ui/blur-fade";
 
 const AboutSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
   return (
-    <section id="about" className="py-20 section-padding bg-gradient-to-br from-gray-50/50 via-white to-gray-100/30" ref={ref}>
+    <section id="about" className="py-20 section-padding bg-gray-50 dark:bg-gray-900">
       <div className="container-width">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Profile Image */}
-          <motion.div 
-            className="flex justify-center lg:justify-start"
-            initial={{ opacity: 0, x: -100 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <motion.div 
-              className="relative"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="w-80 h-80 glass-effect rounded-2xl flex items-center justify-center relative overflow-hidden">
-                {/* Animated border */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-gray-400 via-gray-600 to-gray-800 rounded-2xl"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                  style={{ padding: "2px" }}
-                >
-                  <div className="w-full h-full bg-white rounded-2xl" />
-                </motion.div>
-                
-                <div className="relative z-10 text-center text-gray-600 p-6">
-                  <motion.div 
-                    className="w-28 h-28 bg-gradient-to-br from-gray-400 via-gray-600 to-gray-800 rounded-full mx-auto mb-7 flex items-center justify-center overflow-hidden"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    <img
-                      className="object-cover w-full h-full rounded-full"
-                      src="https://res.cloudinary.com/dqwxudyzu/image/upload/v1749374580/avatarProfile_kkgvqq.jpg"
-                      alt="avatar"
-                    />
-                  </motion.div>
-                  <p className="text-sm font-semibold gradient-text">Võ Hoàng Tuấn</p>
-                  <p className="text-xs text-gray-500">(Software Developer)</p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* About Content */}
-          <motion.div 
-            className="space-y-6"
-            initial={{ opacity: 0, x: 100 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          >
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold gradient-text"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+        <BlurFade delay={0.25} inView>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
               About Me
-            </motion.h2>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Learn more about my background, experience, and what drives my passion for development.
+            </p>
+          </div>
+        </BlurFade>
 
-            <div className="space-y-4 text-gray-600 leading-relaxed">
-              <motion.p 
-                className="text-lg"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                As a final-year student with a strong aspiration to contribute
-                to my country's technological growth, I've dedicated myself to
-                mastering software engineering principles. My core expertise
-                lies in .NET and the strategic application of Clean Architecture
-                to create software that is not only functional but also clean,
-                testable, and easy to maintain. I am driven by the challenge of
-                solving complex problems and building systems that last.
-              </motion.p>
-
-              <motion.p 
-                className="text-lg"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
-                Beyond coding, I am an active leader and team player. As an
-                Executive Committee Member of my university's IT Club, I
-                organized technical workshops and mentored fellow students. My
-                long-term participation in my university's football team has
-                taught me discipline, resilience, and the power of teamwork
-                under pressure.
-              </motion.p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <BlurFade delay={0.5} inView>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-black dark:text-white">
+                My Journey
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                I'm a dedicated software developer with a strong foundation in backend development, 
+                particularly with .NET technologies and Clean Architecture principles. My approach 
+                to coding emphasizes maintainability, scalability, and robust system design.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Throughout my career, I've been passionate about creating high-quality software 
+                that not only meets current requirements but also stands the test of time. I believe 
+                in writing clean, well-documented code that other developers can easily understand 
+                and build upon.
+              </p>
             </div>
-          </motion.div>
+          </BlurFade>
+
+          <BlurFade delay={0.75} inView>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold text-black dark:text-white mb-6">
+                What I Do
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-600 dark:text-gray-400">
+                    Backend Development with .NET and Clean Architecture
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-600 dark:text-gray-400">
+                    Database Design and Optimization
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-600 dark:text-gray-400">
+                    API Development and Integration
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-600 dark:text-gray-400">
+                    System Architecture and Design Patterns
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </BlurFade>
         </div>
       </div>
     </section>
