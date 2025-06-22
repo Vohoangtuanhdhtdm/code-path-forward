@@ -7,93 +7,83 @@
 
 @layer base {
   :root {
-    --background: 249 250 251;
-    --foreground: 55 65 81;
+    --background: 255 255 255;
+    --foreground: 0 0 0;
 
     --card: 255 255 255;
-    --card-foreground: 55 65 81;
+    --card-foreground: 0 0 0;
 
     --popover: 255 255 255;
-    --popover-foreground: 55 65 81;
+    --popover-foreground: 0 0 0;
 
-    --primary: 79 70 229;
+    --primary: 0 0 0;
     --primary-foreground: 255 255 255;
 
-    --secondary: 243 244 246;
-    --secondary-foreground: 75 85 99;
+    --secondary: 249 249 249;
+    --secondary-foreground: 64 64 64;
 
-    --muted: 243 244 246;
-    --muted-foreground: 107 114 128;
+    --muted: 240 240 240;
+    --muted-foreground: 128 128 128;
 
-    --accent: 56 189 248;
-    --accent-foreground: 255 255 255;
+    --accent: 224 224 224;
+    --accent-foreground: 64 64 64;
 
-    --destructive: 239 68 68;
+    --destructive: 64 64 64;
     --destructive-foreground: 255 255 255;
 
-    --border: 229 231 235;
-    --input: 243 244 246;
-    --ring: 79 70 229;
+    --border: 224 224 224;
+    --input: 240 240 240;
+    --ring: 128 128 128;
 
     --radius: 0.75rem;
 
     --sidebar-background: 255 255 255;
-    --sidebar-foreground: 55 65 81;
-    --sidebar-primary: 79 70 229;
+    --sidebar-foreground: 0 0 0;
+    --sidebar-primary: 0 0 0;
     --sidebar-primary-foreground: 255 255 255;
-    --sidebar-accent: 243 244 246;
-    --sidebar-accent-foreground: 55 65 81;
-    --sidebar-border: 229 231 235;
-    --sidebar-ring: 79 70 229;
-
-    /* Harmonious color palette - Soft Indigo, Calm Blue, Warm Beige */
-    --gradient-from: 79 70 229;
-    --gradient-via: 56 189 248;
-    --gradient-to: 169 132 103;
+    --sidebar-accent: 240 240 240;
+    --sidebar-accent-foreground: 0 0 0;
+    --sidebar-border: 224 224 224;
+    --sidebar-ring: 128 128 128;
   }
 
   .dark {
-    --background: 249 250 251;
-    --foreground: 55 65 81;
+    --background: 10 10 10;
+    --foreground: 255 255 255;
 
-    --card: 255 255 255;
-    --card-foreground: 55 65 81;
+    --card: 26 26 26;
+    --card-foreground: 255 255 255;
 
-    --popover: 255 255 255;
-    --popover-foreground: 55 65 81;
+    --popover: 26 26 26;
+    --popover-foreground: 255 255 255;
 
-    --primary: 79 70 229;
-    --primary-foreground: 255 255 255;
+    --primary: 255 255 255;
+    --primary-foreground: 0 0 0;
 
-    --secondary: 243 244 246;
-    --secondary-foreground: 75 85 99;
+    --secondary: 42 42 42;
+    --secondary-foreground: 192 192 192;
 
-    --muted: 243 244 246;
-    --muted-foreground: 107 114 128;
+    --muted: 42 42 42;
+    --muted-foreground: 160 160 160;
 
-    --accent: 56 189 248;
-    --accent-foreground: 255 255 255;
+    --accent: 64 64 64;
+    --accent-foreground: 224 224 224;
 
-    --destructive: 239 68 68;
-    --destructive-foreground: 255 255 255;
+    --destructive: 192 192 192;
+    --destructive-foreground: 26 26 26;
 
-    --border: 229 231 235;
-    --input: 243 244 246;
-    --ring: 79 70 229;
+    --border: 64 64 64;
+    --input: 42 42 42;
+    --ring: 160 160 160;
 
-    --sidebar-background: 255 255 255;
-    --sidebar-foreground: 55 65 81;
-    --sidebar-primary: 79 70 229;
-    --sidebar-primary-foreground: 255 255 255;
-    --sidebar-accent: 243 244 246;
-    --sidebar-accent-foreground: 55 65 81;
-    --sidebar-border: 229 231 235;
-    --sidebar-ring: 79 70 229;
-
-    /* Harmonious color palette */
-    --gradient-from: 79 70 229;
-    --gradient-via: 56 189 248;
-    --gradient-to: 169 132 103;
+    --sidebar-background: 26 26 26;
+    --sidebar-foreground: 255 255 255;
+    --sidebar-primary: 255 255 255;
+    --sidebar-primary-foreground: 0 0 0;
+    --sidebar-accent: 42 42 42;
+    --sidebar-accent-foreground: 255 255 255;
+    --sidebar-border: 64 64 64;
+    --sidebar-ring: 160 160 160;
   }
 }
 
@@ -121,23 +111,43 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-600 via-sky-400 to-amber-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-black via-gray-700 to-gray-500 bg-clip-text text-transparent;
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, rgba(79, 70, 229, 0.03) 0%, rgba(56, 189, 248, 0.05) 50%, rgba(169, 132, 103, 0.03) 100%);
+    background: linear-gradient(135deg, rgba(249, 249, 249, 0.5) 0%, rgba(240, 240, 240, 0.3) 50%, rgba(224, 224, 224, 0.5) 100%);
   }
 
   .glass-effect {
-    @apply bg-white/80 backdrop-blur-xl border border-gray-200/70 shadow-lg;
+    @apply bg-white/90 backdrop-blur-xl border border-gray-200 shadow-lg;
   }
 
   .glow-effect {
-    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.08), 0 8px 40px rgba(56, 189, 248, 0.06), 0 16px 80px rgba(169, 132, 103, 0.04);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 8px 40px rgba(0, 0, 0, 0.03), 0 16px 80px rgba(0, 0, 0, 0.02);
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1;
+  }
+
+  .dark .gradient-text {
+    @apply bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent;
+  }
+
+  .dark .gradient-bg {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.5) 0%, rgba(42, 42, 42, 0.3) 50%, rgba(64, 64, 64, 0.5) 100%);
+  }
+
+  .dark .glass-effect {
+    @apply bg-gray-900/90 backdrop-blur-xl border border-gray-700 shadow-lg;
+  }
+
+  .dark .glow-effect {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05), 0 8px 40px rgba(255, 255, 255, 0.03), 0 16px 80px rgba(255, 255, 255, 0.02);
+  }
+
+  .dark .card-hover {
+    @apply hover:shadow-white/5;
   }
 }
 
@@ -157,13 +167,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100;
+  @apply bg-gray-100 dark:bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-indigo-400 via-sky-400 to-amber-400 rounded-full;
+  @apply bg-gradient-to-b from-gray-400 via-gray-500 to-gray-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply from-indigo-500 via-sky-500 to-amber-500;
+  @apply from-gray-500 via-gray-600 to-gray-700;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-gray-600 via-gray-500 to-gray-400 rounded-full;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply from-gray-700 via-gray-600 to-gray-500;
 }

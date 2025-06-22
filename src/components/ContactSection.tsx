@@ -73,7 +73,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 section-padding bg-gradient-to-br from-indigo-50/40 via-white to-sky-50/30">
+    <section id="contact" className="py-20 section-padding bg-gradient-to-br from-gray-100/40 via-white to-gray-50/30">
       <div className="container-width">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
@@ -88,7 +88,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="glass-effect rounded-xl p-8 border border-gray-200/70">
+          <div className="glass-effect rounded-xl p-8 border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-700 mb-6">
               Send a Message
             </h3>
@@ -107,7 +107,7 @@ const ContactSection = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full border-gray-200 focus:border-indigo-400 focus:ring-indigo-400"
+                  className="w-full border-gray-200 focus:border-gray-400 focus:ring-gray-400"
                   placeholder="Your Name"
                 />
               </div>
@@ -126,7 +126,7 @@ const ContactSection = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full border-gray-200 focus:border-indigo-400 focus:ring-indigo-400"
+                  className="w-full border-gray-200 focus:border-gray-400 focus:ring-gray-400"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -144,12 +144,12 @@ const ContactSection = () => {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full h-32 border-gray-200 focus:border-indigo-400 focus:ring-indigo-400"
+                  className="w-full h-32 border-gray-200 focus:border-gray-400 focus:ring-gray-400"
                   placeholder="Your message..."
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-gradient-to-r from-indigo-500 via-sky-400 to-amber-400 hover:from-indigo-600 hover:via-sky-500 hover:to-amber-500">
+              <Button type="submit" className="w-full bg-black hover:bg-gray-800">
                 Send Message
               </Button>
             </form>
@@ -170,9 +170,9 @@ const ContactSection = () => {
                     rel={
                       link.name !== "Email" ? "noopener noreferrer" : undefined
                     }
-                    className="flex items-center space-x-4 p-4 glass-effect rounded-lg hover:border-indigo-300 card-hover border border-gray-200/70"
+                    className="flex items-center space-x-4 p-4 glass-effect rounded-lg hover:border-gray-300 card-hover border border-gray-200"
                   >
-                    <div className="text-indigo-600">{link.icon}</div>
+                    <div className="text-gray-600">{link.icon}</div>
                     <span className="text-gray-700 font-medium">
                       {link.name}
                     </span>
@@ -181,7 +181,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-indigo-50/80 to-sky-50/60 border border-gray-200/60 rounded-lg p-6">
+            <div className="bg-gradient-to-br from-gray-50/80 to-gray-100/60 border border-gray-200 rounded-lg p-6">
               <h4 className="font-semibold text-gray-700 mb-2">
                 Quick Response
               </h4>

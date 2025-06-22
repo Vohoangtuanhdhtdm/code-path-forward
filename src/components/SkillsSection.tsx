@@ -67,7 +67,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section className="py-20 section-padding bg-gradient-to-br from-amber-50/40 via-white to-sky-50/30" ref={ref}>
+    <section className="py-20 section-padding bg-gradient-to-br from-gray-100/40 via-white to-gray-50/30" ref={ref}>
       <div className="container-width">
         <motion.div 
           className="text-center mb-16"
@@ -102,7 +102,7 @@ const SkillsSection = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div 
                     key={skillIndex} 
-                    className="glass-effect rounded-lg p-4 card-hover border border-gray-200/70 group cursor-pointer"
+                    className="glass-effect rounded-lg p-4 card-hover border border-gray-200 group cursor-pointer"
                     whileHover={{ 
                       scale: 1.05,
                       transition: { duration: 0.2 }

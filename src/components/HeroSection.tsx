@@ -18,7 +18,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center section-padding pt-20 relative overflow-hidden bg-gradient-to-br from-gray-50/60 via-white to-blue-50/40"
+      className="min-h-screen flex items-center justify-center section-padding pt-20 relative overflow-hidden bg-gradient-to-br from-gray-50/60 via-white to-gray-100/40"
     >
       {/* Animated background gradient */}
       <div className="absolute inset-0 gradient-bg opacity-70" />
@@ -40,7 +40,7 @@ const HeroSection = () => {
               Võ Hoàng Tuấn
             </motion.h1>
             <motion.h2 
-              className="text-xl md:text-2xl lg:text-3xl text-indigo-600 font-semibold"
+              className="text-xl md:text-2xl lg:text-3xl text-gray-700 font-semibold"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -73,7 +73,7 @@ const HeroSection = () => {
             >
               <Button
                 size="lg"
-                className="px-8 py-3 text-lg bg-gradient-to-r from-indigo-500 via-sky-400 to-amber-400 hover:from-indigo-600 hover:via-sky-500 hover:to-amber-500 shadow-lg text-white font-semibold"
+                className="px-8 py-3 text-lg bg-black hover:bg-gray-800 shadow-lg text-white font-semibold"
                 onClick={() => scrollToSection("projects")}
               >
                 View My Projects
@@ -86,7 +86,7 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-8 py-3 text-lg border-2 border-indigo-300 text-indigo-600 hover:bg-indigo-50 font-semibold"
+                className="px-8 py-3 text-lg border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold"
                 onClick={downloadCV}
               >
                 View My Github
@@ -107,7 +107,7 @@ const HeroSection = () => {
               className="cursor-pointer"
               onClick={() => scrollToSection("about")}
             >
-              <ChevronDown className="w-8 h-8 text-indigo-500" />
+              <ChevronDown className="w-8 h-8 text-gray-500" />
             </motion.div>
           </motion.div>
         </div>

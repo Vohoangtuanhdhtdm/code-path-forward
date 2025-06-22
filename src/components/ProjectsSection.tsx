@@ -27,7 +27,7 @@ const ProjectsSection = () => {
       ],
       githubLink: "https://github.com/Vohoangtuanhdhtdm/Meditation.API2.git",
       icon: "🧘",
-      gradient: "from-indigo-400 to-sky-400",
+      gradient: "from-gray-400 to-gray-600",
     },
     {
       title: "Lemoo E-commerce Platform (Scientific Research Project)",
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       technologies: ["ReactJS", "REST API", "Microservices environment", "Git"],
       githubLink: "https://github.com/Zeustakeshi/Lemoo.git",
       icon: "🛒",
-      gradient: "from-sky-400 to-amber-400",
+      gradient: "from-gray-600 to-gray-800",
     },
     {
       title: "TuAn Fashion Store (Full-stack Website)",
@@ -49,7 +49,7 @@ const ProjectsSection = () => {
       technologies: [".NET MVC", "ReactJS", "SQL Server", "HTML/CSS"],
       githubLink: "https://github.com/Vohoangtuanhdhtdm/CuaHangVHT.git",
       icon: "👔",
-      gradient: "from-amber-400 to-indigo-400",
+      gradient: "from-gray-800 to-gray-400",
     },
   ];
 
@@ -76,7 +76,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 section-padding bg-gradient-to-br from-sky-50/40 via-white to-amber-50/30" ref={ref}>
+    <section id="projects" className="py-20 section-padding bg-gradient-to-br from-gray-50/40 via-white to-gray-100/30" ref={ref}>
       <div className="container-width">
         <motion.div 
           className="text-center mb-16"
@@ -108,7 +108,7 @@ const ProjectsSection = () => {
                 transition: { duration: 0.3 }
               }}
             >
-              <div className="glass-effect rounded-xl p-6 h-full relative overflow-hidden card-hover border border-gray-200/70">
+              <div className="glass-effect rounded-xl p-6 h-full relative overflow-hidden card-hover border border-gray-200">
                 {/* Animated background gradient */}
                 <motion.div 
                   className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
@@ -136,7 +136,7 @@ const ProjectsSection = () => {
                   </p>
 
                   <motion.div 
-                    className="glass-effect border border-gray-200/50 rounded-lg p-4 flex-grow"
+                    className="glass-effect border border-gray-200 rounded-lg p-4 flex-grow"
                     whileHover={{ scale: 1.02 }}
                   >
                     <p className="text-sm text-gray-700 font-medium mb-1">
@@ -155,7 +155,7 @@ const ProjectsSection = () => {
                       {project.technologies.map((tech, techIndex) => (
                         <motion.span
                           key={techIndex}
-                          className="px-3 py-1 bg-gradient-to-r from-indigo-50 to-sky-50 text-gray-700 text-xs rounded-full border border-gray-200/60"
+                          className="px-3 py-1 bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 text-xs rounded-full border border-gray-200"
                           whileHover={{ scale: 1.1 }}
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
@@ -176,7 +176,7 @@ const ProjectsSection = () => {
                   >
                     <Button
                       variant="outline"
-                      className="w-full border-indigo-200 text-indigo-600 group-hover:bg-gradient-to-r group-hover:from-indigo-500 group-hover:via-sky-400 group-hover:to-amber-400 group-hover:text-white group-hover:border-transparent transition-all duration-300"
+                      className="w-full border-gray-300 text-gray-700 group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-300"
                       onClick={() => window.open(project.githubLink, "_blank")}
                     >
                       <Github className="w-4 h-4 mr-2" />
