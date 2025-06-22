@@ -8,6 +8,7 @@ import SkillsSection from '@/components/SkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ContactSection from '@/components/ContactSection';
 import ParticlesBackground from '@/components/ParticlesBackground';
+import { TimelineDemo } from '@/components/ui/timeline';
 
 const Index = () => {
   useEffect(() => {
@@ -25,6 +26,9 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
+      <div id="timeline" className="relative z-10">
+        <TimelineDemo />
+      </div>
       <ProjectsSection />
       <ContactSection />
       
